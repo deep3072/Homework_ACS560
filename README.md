@@ -1,1 +1,1 @@
-A repository for assignments of CS 560 
+A repository for assignments of ACS 560 
