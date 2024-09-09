@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "e876c8f0-cdef-4b89-9469-bc0d0a865db7",
+		"name": "StockAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35156428"
+	},
+	"item": [
+		{
+			"name": "StockService - Get all Stock data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stocks/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockService - Get Stock data for particular month & year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stocks/2002/07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"2002",
+						"07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockService - Get Stock data for a particular year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stocks/2002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"2002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockAnalysisService - Analyze stock data for a particular month and year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/stocks/analyze/2002/07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stocks",
+						"analyze",
+						"2002",
+						"07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockAnalysisService - Analyze stock data for every month in a particular year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/stocks/analyze/2002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stocks",
+						"analyze",
+						"2002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockAnalysisService - analyze stock data for all months and years",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/stocks/analyze/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stocks",
+						"analyze",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
