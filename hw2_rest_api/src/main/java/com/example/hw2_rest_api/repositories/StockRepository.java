@@ -2,6 +2,7 @@ package com.example.hw2_rest_api.repositories;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,14 +12,13 @@ import com.example.hw2_rest_api.models.StockData;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 
-
 @Repository
 public class StockRepository {
 
     public List<StockData> loadStockDataFromCSV() {
         List<StockData> stocks = new ArrayList<>();
         // String csvFile = "JPMC.csv";
-        try (CSVReader reader = new CSVReader(new FileReader("D:\\MS\\Fall 2024\\Software Engineering\\github\\hw2_rest_api\\JPMC.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader(Paths.get("JPMC.csv").toFile()))) {
             String[] line;
             reader.readNext();
             while ((line = reader.readNext()) != null) {
