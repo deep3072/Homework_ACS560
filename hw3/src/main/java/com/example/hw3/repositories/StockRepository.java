@@ -3,6 +3,7 @@ package com.example.hw3.repositories;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -40,7 +41,7 @@ public class StockRepository {
 
     private static List<StockData> initializeStockData() {
         List<StockData> stocks = new ArrayList<>();
-        try (CSVReader reader = new CSVReader(new FileReader("D:\\MS\\Fall 2024\\Software Engineering\\github\\hw3\\JPMC.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader(Paths.get("JPMC.csv").toFile()))) {
             String[] line;
             reader.readNext(); // Skip header
             while ((line = reader.readNext()) != null) {
@@ -113,7 +114,7 @@ public class StockRepository {
     private static boolean saveStockData(StockData stockData) {
         boolean isSaved = false;
 
-        try (FileWriter writer = new FileWriter("D:\\MS\\Fall 2024\\Software Engineering\\github\\hw3\\JPMC.csv", true)) {
+        try (FileWriter writer = new FileWriter(Paths.get("JPMC.csv").toFile(), true)) {
             StatefulBeanToCsv<StockData> beanWriter = createWriter(writer);
             beanWriter.write(stockData);
             isSaved = true;
@@ -127,7 +128,7 @@ public class StockRepository {
     private static boolean saveStockDataList() {
         boolean isSaved = false;
 
-        try (FileWriter writer = new FileWriter("D:\\MS\\Fall 2024\\Software Engineering\\github\\hw3\\JPMC.csv")) {
+        try (FileWriter writer = new FileWriter(Paths.get("JPMC.csv").toFile())) {
             StatefulBeanToCsv<StockData> beanWriter = createWriter(writer);
             beanWriter.write(stockDataList);
             isSaved = true;
