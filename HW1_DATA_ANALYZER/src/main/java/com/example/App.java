@@ -3,6 +3,7 @@ package com.example;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -28,7 +29,7 @@ public class App {
         System.out.print("Enter the year (from 1980 to 2024): ");
         int year = scanner.nextInt();
 
-        try (CSVReader reader = new CSVReader(new FileReader("HW1_DATA_ANALYZER/JPMC.csv"))) { // Read the CSV File
+        try (CSVReader reader = new CSVReader(new FileReader(Paths.get("JPMC.csv").toFile()))) { // Read the CSV File
             String[] line;
             reader.readNext();
             while ((line = reader.readNext()) != null) {
@@ -59,7 +60,7 @@ public class App {
         double median = calculateMedian(data);
         double mode = calculateMode(data);
 
-        try (FileWriter writer = new FileWriter("HW1_DATA_ANALYZER/Analysis_" + month + "_" + year + ".txt")) {
+        try (FileWriter writer = new FileWriter("Analysis_" + month + "_" + year + ".txt")) {
             writer.write("Data Analysis of JPMC Stock Prices for " + month + "/" + year + "\n");
             writer.write("Mean: " + mean + "\n");
             writer.write("Median: " + median + "\n");
