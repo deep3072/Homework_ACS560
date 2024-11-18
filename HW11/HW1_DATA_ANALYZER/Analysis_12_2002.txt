@@ -1,0 +1,4 @@
+Data Analysis of JPMC Stock Prices for 12/2002
+Mean: 24.23857153029669
+Median: 24.149999618530273
+Mode: 24.0

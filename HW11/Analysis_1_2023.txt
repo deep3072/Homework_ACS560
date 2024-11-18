@@ -1,0 +1,4 @@
+Data Analysis of JPMC Stock Prices for 1/2023
+Mean: 138.21600189208985
+Median: 138.5250015258789
+Mode: 134.75

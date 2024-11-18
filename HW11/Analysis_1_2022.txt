@@ -1,0 +1,4 @@
+Data Analysis of JPMC Stock Prices for 1/2022
+Mean: 156.4110008239746
+Median: 154.5800018310547
+Mode: 148.92999267578125

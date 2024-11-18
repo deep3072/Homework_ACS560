@@ -1,0 +1,4 @@
+Data Analysis of JPMC Stock Prices for 1/2015
+Mean: 57.493000221252444
+Median: 56.790000915527344
+Mode: 55.88999938964844
